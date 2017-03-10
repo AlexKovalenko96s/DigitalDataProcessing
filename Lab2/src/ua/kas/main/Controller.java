@@ -56,7 +56,8 @@ public class Controller {
 				green = (pixel >> 8) & 0xff;
 				blue = (pixel >> 0) & 0xff;
 
-				newImage.setRGB(width, height, new Color(255 - red, 255 - green, 255 - blue, alpha).getRGB());
+				newImage.setRGB(image.getWidth() - width - 1, height,
+						new Color(255 - red, 255 - green, 255 - blue, alpha).getRGB());
 			}
 		}
 
