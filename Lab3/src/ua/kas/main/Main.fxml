@@ -14,11 +14,12 @@
             <Rectangle2D />
          </viewport></ImageView>
       <ImageView fx:id="imageV_2" fitHeight="131.0" fitWidth="167.0" layoutX="219.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="303.0" layoutY="161.0" mnemonicParsing="false" onAction="#openImage" text="Open" />
-      <Button layoutX="354.0" layoutY="161.0" mnemonicParsing="false" onAction="#go" text="Go" />
-      <Button layoutX="69.0" layoutY="161.0" mnemonicParsing="false" onAction="#window" text="window" />
-      <TextField fx:id="tf_v" layoutX="14.0" layoutY="161.0" prefHeight="25.0" prefWidth="46.0" />
-      <ScrollBar fx:id="scr_rotate" layoutX="133.0" layoutY="167.0" max="360.0" prefHeight="14.0" prefWidth="105.0" />
-      <Button layoutX="244.0" layoutY="161.0" mnemonicParsing="false" onAction="#rotate" text="Rotate" />
+      <Button layoutX="266.0" layoutY="161.0" mnemonicParsing="false" onAction="#openImage" text="Open" />
+      <Button layoutX="312.0" layoutY="161.0" mnemonicParsing="false" onAction="#go" text="Go" />
+      <Button layoutX="52.0" layoutY="161.0" mnemonicParsing="false" onAction="#window" text="window" />
+      <TextField fx:id="tf_v" layoutX="6.0" layoutY="161.0" prefHeight="25.0" prefWidth="46.0" />
+      <ScrollBar fx:id="scr_rotate" layoutX="110.0" layoutY="167.0" max="360.0" prefHeight="14.0" prefWidth="105.0" />
+      <Button layoutX="215.0" layoutY="161.0" mnemonicParsing="false" onAction="#rotate" text="Rotate" />
+      <Button layoutX="344.0" layoutY="161.0" mnemonicParsing="false" onAction="#save" text="Save" />
    </children>
 </AnchorPane>

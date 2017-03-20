@@ -3,6 +3,7 @@ package ua.kas.main;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
@@ -32,6 +33,8 @@ public class Controller {
 
 	private String path_image;
 
+	private BufferedImage newImage;
+
 	public void openImage(ActionEvent e) throws IOException {
 		FileChooser fileChooser = new FileChooser();
 
@@ -49,7 +52,7 @@ public class Controller {
 
 	public void go() throws IOException {
 		BufferedImage image = ImageIO.read(new File(path_image));
-		BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
+		newImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
 
 		// Color color = null;
 		int pixel, alpha, red, green, blue;
@@ -79,7 +82,7 @@ public class Controller {
 
 	public void window() throws IOException {
 		BufferedImage image = ImageIO.read(new File(path_image));
-		BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
+		newImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
 
 		Random random = new Random();
 
@@ -119,7 +122,7 @@ public class Controller {
 
 	public void rotate() throws IOException {
 		BufferedImage image = ImageIO.read(new File(path_image));
-		BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
+		newImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
 
 		// Color color = null;
 		int pixel, alpha, red, green, blue;
@@ -148,11 +151,30 @@ public class Controller {
 				}
 			}
 		}
-
-		ImageIO.write(newImage, "png", new File("image.png"));
-
 		Image card = SwingFXUtils.toFXImage(newImage, null);
 
 		imageV_2.setImage(card);
+	}
+
+	public void save(ActionEvent e) throws IOException {
+		FileChooser fileChooser = new FileChooser();
+
+		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.png");
+		fileChooser.getExtensionFilters().add(extFilter);
+
+		// Show save file dialog
+		File file = fileChooser.showSaveDialog(null);
+		FileWriter fileWriter;
+		String path = null;
+		try {
+			fileWriter = new FileWriter(file);
+			fileWriter.close();
+
+			path = file.getAbsolutePath();
+
+		} catch (Exception ex) {
+		}
+
+		ImageIO.write(newImage, "png", new File(path));
 	}
 }
