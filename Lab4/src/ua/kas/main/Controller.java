@@ -287,15 +287,15 @@ public class Controller {
 
 		imageV_2.setImage(card);
 
-		LineChart chart = new LineChart(new NumberAxis(), new NumberAxis());
+		chart = new LineChart(new NumberAxis(), new NumberAxis());
 		XYChart.Series series = new XYChart.Series();
 		series.setName("Red");
 
-		LineChart chartG = new LineChart(new NumberAxis(), new NumberAxis());
+		chartG = new LineChart(new NumberAxis(), new NumberAxis());
 		XYChart.Series seriesG = new XYChart.Series();
 		seriesG.setName("Green");
 
-		LineChart chartB = new LineChart(new NumberAxis(), new NumberAxis());
+		chartB = new LineChart(new NumberAxis(), new NumberAxis());
 		XYChart.Series seriesB = new XYChart.Series();
 		seriesB.setName("Blue");
 
