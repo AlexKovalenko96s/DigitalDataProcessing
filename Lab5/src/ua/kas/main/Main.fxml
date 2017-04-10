@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.kas.main.Controller">
+   <children>
+      <ImageView fx:id="imageV_1" fitHeight="131.0" fitWidth="167.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport></ImageView>
+      <ImageView fx:id="imageV_2" fitHeight="131.0" fitWidth="167.0" layoutX="219.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="266.0" layoutY="161.0" mnemonicParsing="false" onAction="#openImage" text="Open" />
+      <Button layoutX="312.0" layoutY="161.0" mnemonicParsing="false" onAction="#go" text="Go" />
+      <Button layoutX="52.0" layoutY="161.0" mnemonicParsing="false" onAction="#window" text="window" />
+      <TextField fx:id="tf_v" layoutX="6.0" layoutY="161.0" prefHeight="25.0" prefWidth="46.0" />
+      <ScrollBar fx:id="scr_rotate" layoutX="110.0" layoutY="167.0" max="360.0" prefHeight="14.0" prefWidth="105.0" />
+      <Button layoutX="215.0" layoutY="161.0" mnemonicParsing="false" onAction="#rotate" text="Rotate" />
+      <Button layoutX="344.0" layoutY="161.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <VBox fx:id="vBoxR" layoutX="3.0" layoutY="200.0" prefHeight="200.0" prefWidth="994.0" />
+      <Button layoutX="412.0" layoutY="120.0" mnemonicParsing="false" onAction="#graf" prefHeight="25.0" prefWidth="187.0" text="Normalization" />
+      <VBox fx:id="vBoxG" layoutX="4.0" layoutY="400.0" prefHeight="200.0" prefWidth="994.0" />
+      <VBox fx:id="vBoxB" layoutX="3.0" layoutY="600.0" prefHeight="200.0" prefWidth="994.0" />
+      <TextField fx:id="tf_Rmin" layoutX="412.0" layoutY="24.0" prefHeight="25.0" prefWidth="80.0" promptText="R-min" />
+      <TextField fx:id="tf_Rmax" layoutX="518.0" layoutY="24.0" prefHeight="25.0" prefWidth="80.0" promptText="R-max" />
+      <TextField fx:id="tf_Gmin" layoutX="412.0" layoutY="55.0" prefHeight="25.0" prefWidth="80.0" promptText="G-min" />
+      <TextField fx:id="tf_Gmax" layoutX="518.0" layoutY="55.0" prefHeight="25.0" prefWidth="80.0" promptText="G-max" />
+      <TextField fx:id="tf_Bmin" layoutX="412.0" layoutY="87.0" prefHeight="25.0" prefWidth="80.0" promptText="B-min" />
+      <TextField fx:id="tf_Bmax" layoutX="518.0" layoutY="87.0" prefHeight="25.0" prefWidth="80.0" promptText="B-max" />
+      <Button layoutX="412.0" layoutY="162.0" mnemonicParsing="false" onAction="#addGraf" prefHeight="25.0" prefWidth="187.0" text="Graf" />
+      <Button layoutX="616.0" layoutY="120.0" mnemonicParsing="false" onAction="#medianFilter" prefHeight="68.0" prefWidth="91.0" text="MedianFilter" />
+   </children>
+</AnchorPane>
